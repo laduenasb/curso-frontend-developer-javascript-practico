@@ -13,6 +13,7 @@
 
   <title>YardSale: tiendita de cosas chidas</title>
   <style>
+    /* General */
     :root {
       --white: #FFFFFF;
       --black: #000000;
@@ -94,6 +95,7 @@
       align-items: center;
     }
 
+    /* Desktop menu */
     .desktop-menu {
       position: absolute;
       top: 60px;
@@ -132,6 +134,39 @@
       display: inline-block;
     }
 
+    /* Mobile menu */
+
+    .mobile-menu {
+      position: absolute;
+      top: 60px;
+      padding: 24px;
+    }
+    .mobile-menu a {
+      text-decoration: none;
+      color: var(--black);
+      font-weight: bold;
+      /* margin-bottom: 24px; */
+    }
+    .mobile-menu ul {
+      padding: 0;
+      margin: 24px 0 0;
+      list-style: none;
+    }
+    .mobile-menu ul:nth-child(1) {
+      border-bottom: 1px solid var(--very-light-pink);
+    }
+    .mobile-menu ul li {
+      margin-bottom: 24px;
+    }
+    .email {
+      font-size: var(--sm);
+      font-weight: 300 !important;
+    }
+    .sign-out {
+      font-size: var(--sm);
+      color: var(--hospital-green) !important;
+    }
+
     @media (max-width: 640px) {
       .menu {
         display: block;
@@ -140,6 +175,14 @@
         display: none;
       }
       .navbar-email {
+        display: none;
+      }
+      .desktop-menu {
+        display: none;
+      }
+    }
+    @media (min-width: 641px) {
+      .mobile-menu {
         display: none;
       }
     }
@@ -199,6 +242,49 @@
         </ul>
       </div>
   </nav>
+  <div class="mobile-menu inactive">
+    <ul>
+      <li>
+        <a href="/">CATEGORIES</a>
+      </li>
+      <li>
+        <a href="/">All</a>
+      </li>
+      <li>
+        <a href="/">Clothes</a>
+      </li>
+      <li>
+        <a href="/">Electronics</a>
+      </li>
+      <li>
+        <a href="/">Furnitures</a>
+      </li>
+      <li>
+        <a href="/">Toys</a>
+      </li>
+      <li>
+        <a href="/">Other</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="/">My orders</a>
+      </li>
+      <li>
+        <a href="/">My account</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="/" class="email">platzi@example.com</a>
+      </li>
+      <li>
+        <a href="/" class="sign-out">Sign out</a>
+      </li>
+    </ul>
+  </div>
   <script src="./main.js"></script>
 </body>
 </html>
